@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#0b1020">
+  <meta name="description" content="Periksa tautan, parameter tujuan, dan sinyal risiko URL langsung di browser.">
+  <title>Link Inspector Pro</title>
+  <link rel="stylesheet" href="/style.css">
+  <script src="/app.js" defer></script>
+</head>
+<body>
+  <main class="wrap">
+    <header class="header">
+      <div class="logo">↗</div>
+      <div><div class="eyebrow">URL TOOLKIT / CLIENT-SIDE</div><h1>Link Inspector <span>Pro</span></h1>
+      <p class="sub">Periksa tujuan yang terlihat dan sinyal risiko tanpa mengirim URL ke server.</p></div>
+    </header>
+
+    <section class="panel">
+      <label for="urlInput">Tempel URL lengkap</label>
+      <textarea id="urlInput" rows="4" spellcheck="false" placeholder="https://contoh.com/redirect?url=https%3A%2F%2Fexample.org"></textarea>
+      <div class="controls">
+        <button id="inspectBtn">Periksa URL</button>
+        <button id="pasteBtn" class="secondary" type="button">Tempel dari clipboard</button>
+        <button id="clearBtn" class="ghost" type="button">Bersihkan</button>
+      </div>
+      <div class="privacy"><span class="dot"></span> Pemeriksaan dilakukan di perangkat ini; tidak ada endpoint server yang mengambil URL.</div>
+    </section>
+
+    <section id="results" class="panel" hidden aria-live="polite">
+      <div class="resultHead"><h2>Hasil pemeriksaan</h2><span id="statusPill" class="pill">Selesai</span></div>
+      <div id="overview" class="overview"></div>
+      <div id="redirects"></div>
+      <div id="risks"></div>
+      <div id="actions" class="controls" hidden>
+        <button id="openBtn" class="secondary" type="button">Buka URL yang dipilih</button>
+        <button id="copyBtn" class="secondary" type="button">Salin URL</button>
+      </div>
+      <p class="small">Pemeriksaan ini bersifat heuristik. Status “tidak terdeteksi” bukan jaminan bahwa tautan aman.</p>
+    </section>
+
+    <section class="panel notes">
+      <h2>Batasan yang jelas</h2>
+      <ul>
+        <li>Dapat membaca URL tujuan yang tertulis di parameter seperti <code>url</code>, <code>target</code>, atau <code>redirect</code>.</li>
+        <li>Tidak melewati timer, CAPTCHA, login, token, anti-bot, atau proteksi situs; tidak mengeksekusi skrip dari situs yang diperiksa.</li>
+        <li>Jika tujuan hanya muncul setelah proses di situs, buka tautan aslinya dan ikuti langkah resmi yang ditampilkan.</li>
+        <li>Jangan masukkan kata sandi, kode OTP, atau data pribadi ke halaman tujuan yang tidak dipercaya.</li>
+      </ul>
+    </section>
+    <footer>Link Inspector Pro · versi 2.0 · bukan pemindai keamanan penuh</footer>
+  </main>
+</body>
+</html>
