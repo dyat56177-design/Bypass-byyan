@@ -1,0 +1,7 @@
+{
+  "name": "sfl-link-inspector-pro",
+  "version": "2.0.0",
+  "private": true,
+  "description": "Client-side URL inspector and safety checks",
+  "scripts": { "dev": "vercel dev" }
+}
